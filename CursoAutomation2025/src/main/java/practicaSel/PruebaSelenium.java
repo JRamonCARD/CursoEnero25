@@ -56,12 +56,12 @@ public class PruebaSelenium {
 		
 		//Dropdowns, estos elementos usan unas funciones que vienen en "org.openqa.selenium.support.ui." debo importarla
 		driver.manage().window().maximize(); //maximizar ventana
-		Thread.sleep(2000);
-		
 		Select drpdwnSelect = new Select(driver.findElement(By.className("product_sort_container")));
 		drpdwnSelect.selectByVisibleText("Price (low to high)");
 	
-		
+		//Cerrar navegador
+		driver.close();  //cierra la ventana/pestaña actual que el web driver esta usando
+		driver.quit();  //cierra todas las ventanas del navegador que el webdriver abrio
 		
 	}
 
